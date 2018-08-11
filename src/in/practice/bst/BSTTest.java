@@ -1,0 +1,22 @@
+package in.practice.bst;
+
+public class BSTTest {
+    public static void main(String... args){
+        BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
+        bst.add(50);
+        bst.add(40);
+        bst.add(70);
+        bst.add(60);
+        bst.add(80);
+        System.out.println(bst.inOrder());
+
+        bst.delete(50);
+        System.out.println(bst.inOrder());
+    }
+
+//            60
+//        /       \
+//        40       70
+//                /   \
+//                  80
+}
