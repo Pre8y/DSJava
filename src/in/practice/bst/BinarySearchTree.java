@@ -81,4 +81,36 @@ public class BinarySearchTree<T extends Comparable> {
         return result.toString();
 
     }
-}
+
+/*
+  //1 2 L 1 3 R 2 4 L 2 5 R 5 6 L
+      60
+    /  \
+    30  70
+    /\
+    20 50
+      /
+      40
+ */
+int level = 0;
+    public void leftView() {
+        if(root==null) return;
+       leftView(root, level+1);
+
+    }
+    private void leftView(Node<T> node, int nextLevel) {
+        if (node == null) return;
+        if(nextLevel>level) {
+            System.out.print(node.data.toString() + " ");
+            level = nextLevel;
+        }
+        if(node.left!=null){
+            leftView(node.left, nextLevel+1);
+        }
+        if(node.right!=null){
+            leftView(node.right, nextLevel+1);
+        }
+    }
+
+
+    }

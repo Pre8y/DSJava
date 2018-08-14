@@ -12,6 +12,14 @@ public class BSTTest {
 
         bst.delete(50);
         System.out.println(bst.inOrder());
+        BinarySearchTree<Integer> bst1 = new BinarySearchTree<Integer>();
+        bst1.add(60);
+        bst1.add(30);
+        bst1.add(70);
+        bst1.add(20);
+        bst1.add(50);
+        bst1.add(40);
+        bst1.leftView();
     }
 
 //            60
